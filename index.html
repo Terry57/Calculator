@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            text-align: center;
+            margin: 4em, 4em;
+            color: rgb(63, 129, 228); 
+            background: linear-gradient(#f2c94c,#f2994a) fixed;
+
+        }
+        h1 {
+            text-align: center;  
+            font-size: 4em;
+        }
+        h2 {
+            font-size: 4em;
+        }
+        body {
+            margin: 3em;
+            background: linear-gradient(#f2c94c,#f2994a) fixed;        
+            
+        }
+        .btn-primary {
+            background-color: rgb(236, 143, 22);
+            font-size: 1.5em;
+        }
+        .btn-info {
+            background-color: rgb(93, 173, 223);
+            font-size: 1.5em;
+        }
+        .btn-warning {
+            background-color: rgb(255, 198, 10);
+            font-size: 1.5em;
+        }
+        .btn-danger {
+            background-color: rgb(206, 109, 45);
+            font-size: 1.5em;
+        }
+        .btn-success {
+            background-color: rgb(89, 91, 247);
+            font-size: 2em;
+        }
+        .form-control {
+            background-image: linear-gradient(to right, rgb(228, 152, 53) , rgb(233, 192, 131));
+        }
+    </style>
+</head>
+<body>
+    <div class="container">  
+        <h1>Calculator</h1>   
+        <br>   
+        <div class="row">
+            <div class="col-sm-12">
+                <input id="input1" class="form-control numeric" placeholder="Enter a number">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <input id="input2" class="form-control numeric" placeholder="Enter a number">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-3"><button onclick="doAdd();" class="btn btn-primary">+</button></div>
+            <div class="col-sm-3"><button onclick="doSubtract();" class="btn btn-info">-</button></div>
+            <div class="col-sm-3"><button onclick="doMultiply();" class="btn btn-warning">*</button></div>
+            <div class="col-sm-3"><button onclick="doDivide();" class="btn btn-danger">/</button></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                Result: <h2 id="output" class="numeric">0</h2>
+                <br>
+                <button type="button" class="btn btn-success" onclick="window.location.href='index.html';">Clear</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function doAdd() {
+            let vals = getVals();
+            let result = vals[0] + vals[1];
+            showOutput(result);
+        }
+        function doSubtract() {
+            let vals = getVals();
+            let result = vals[0] - vals[1];
+            showOutput(result);
+        }
+        function doMultiply() {
+            let vals = getVals();
+            let result = vals[0] * vals[1];
+            showOutput(result);
+        }
+        function doDivide() {
+            let vals = getVals();
+            let result = vals[0] / vals[1];
+            showOutput(result);
+        }
+        function showOutput(result) {
+            document.getElementById("output").innerHTML = result;
+            clearVals();
+        }
+        function getVals() {
+            let val1 = parseFloat(document.getElementById("input1").value);
+           let val2 = parseFloat(document.getElementById("input2").value);
+          return [val1, val2];
+        }
+        
+
+    </script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>  
+</body>
+</html>
