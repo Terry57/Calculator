@@ -12,7 +12,6 @@
             margin: 4em, 4em;
             color: rgb(63, 129, 228); 
             background: linear-gradient(#f2c94c,#f2994a) fixed;
-
         }
         h1 {
             text-align: center;  
@@ -23,8 +22,7 @@
         }
         body {
             margin: 3em;
-            background: linear-gradient(#f2c94c,#f2994a) fixed;        
-            
+            background: linear-gradient(#f2c94c,#f2994a) fixed;           
         }
         .btn-primary {
             background-color: rgb(236, 143, 22);
@@ -67,10 +65,10 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-3"><button onclick="doAdd();" class="btn btn-primary">+</button></div>
-            <div class="col-sm-3"><button onclick="doSubtract();" class="btn btn-info">-</button></div>
-            <div class="col-sm-3"><button onclick="doMultiply();" class="btn btn-warning">*</button></div>
-            <div class="col-sm-3"><button onclick="doDivide();" class="btn btn-danger">/</button></div>
+            <div class="col-sm-3"><button onclick="doAdd();" class="btn btn-primary btn-add">+</button></div>
+            <div class="col-sm-3"><button onclick="doSubtract();" class="btn btn-info btn-subtract">-</button></div>
+            <div class="col-sm-3"><button onclick="doMultiply();" class="btn btn-warning btn-multiply">*</button></div>
+            <div class="col-sm-3"><button onclick="doDivide();" class="btn btn-danger btn-divide">/</button></div>
         </div>
         <div class="row">
             <div class="col-sm-12">
@@ -109,13 +107,9 @@
             let val1 = parseFloat(document.getElementById("input1").value);
            let val2 = parseFloat(document.getElementById("input2").value);
           return [val1, val2];
-        }
-        
+        }       
 
     </script>
-
-
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>  
