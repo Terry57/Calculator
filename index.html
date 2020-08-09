@@ -107,7 +107,11 @@
             let val1 = parseFloat(document.getElementById("input1").value);
            let val2 = parseFloat(document.getElementById("input2").value);
           return [val1, val2];
-        }       
+        }     
+        function clearVals() {
+            document.getElementById("input1").value = null;
+            document.getElementById("input2").value = null;
+        }  
 
     </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
